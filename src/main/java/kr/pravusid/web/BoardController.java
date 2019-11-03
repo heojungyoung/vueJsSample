@@ -71,10 +71,12 @@ public class BoardController {
     	 Page<BoardDto> list = boardService.findAll(pageable,pagination).map(BoardDto::of);
     	 map.put("list", list);
  		 map.put("pagination", pagination.calcPage(list, 5));
-    	 return map;
+ 		 System.out.print(list);
+ 		 
+ 		 return map;
 	  }
-     
 
+     
     @PreAuthorize("isAuthenticated()")
     @PostMapping("")
     public String write(BoardDto boardDto) {

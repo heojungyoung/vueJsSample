@@ -72,7 +72,7 @@ public class BoardController {
     	 map.put("list", list);
  		 map.put("pagination", pagination.calcPage(list, 5));
  		 System.out.print(list);
- 		 
+ 		 System.out.print(list);
  		 return map;
 	  }
 
